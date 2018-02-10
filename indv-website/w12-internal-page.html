@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/w12-indv-style.css">
+    <title>Reviews</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--    <script src="jquery/indiv-jquery.js"></script>-->
+</head>
+
+<body>
+    <header>
+        <nav id="mainnav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="used-phones.html">Pros and Cons</a></li>
+                <li><a href="phone-history.html">Smartphone History</a></li>
+                <li><a href="price-compare.html">Price Comparison</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="../cit230-links.html"> CIT230-links</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <button onclick="goBack()">Back</button>
+        <h1 id="android-history">Customer Reviews</h1>
+        <ol id="clist">
+            <li>Larry Larson: Bowling Green, KY
+                <h1 class="reviewHeader1">Best Site to Buy Used Phones!</h1>
+                <div class="review1">
+                    <p>I had tried to find the best price on a phone and this made it easy to know what I should be paying for the phone I wanted.</p>
+                    <div id="map1" style="width:240px; height:240px;"></div>
+                    <p>(click marker)</p>
+                    <script>
+                        function myMap() {
+                            var myCenter = new google.maps.LatLng(36.970919, -86.438462);
+                            var mapCanvas = document.getElementById("map1");
+                            var mapOptions = {
+
+                                center: new google.maps.LatLng(36.970919, -86.438462),
+                                zoom: 10,
+                                mapTypeControl: true
+                            };
+                            var map = new google.maps.Map(mapCanvas, mapOptions);
+                            var marker = new google.maps.Marker({
+                                position: myCenter
+                            });
+                            marker.setMap(map);
+                            // Zoom to 9 when clicking on marker
+                            google.maps.event.addListener(marker, 'click', function() {
+                                var secretMessage = "This message is secret!";
+                                var infoWindow = new google.maps.InfoWindow({
+                                    content: secretMessage
+                                });
+
+                                infoWindow.open(marker.get('map'), marker);
+                            });
+                        }
+                    </script>
+                </div>
+
+            </li>
+            <li>Adam Smith: COBBS HILL QLD AUSTRALIA
+                <h1 class="reviewHeader2">No guessing on Price!</h1>
+                <p class="review2">Looking for a "New" Phone was always hard and I never knew what the best price would be this site has taken all that guess work out of the process.
+                </p>
+                <div style="width: 240px; height: 205px; border: solid;">
+                    <figure ondrop="drop(event)" ondragover="allowDrop(event)"><img src="images/galaxy-s8-xs.png" alt="photo of Galaxy S8" title="" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)" id="drag1">
+                        <!--                <figcaption class="firstsentence">Rocks are great to view from a ship!</figcaption>-->
+                    </figure>
+
+                </div>
+                <p>(drag)</p>
+            </li>
+            <li>Matthew Jones: Elmhurst, IN
+                <h1 class="reviewHeader3">Everything you need in one place.</h1>
+                <p class="review3">Good site, all the information that you could want is in one place.
+                </p>
+                <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" draggable="true" ondragstart="drag(event)" style="width:150px; height:180px; border: solid;"></div>
+                <p>(drop)</p>
+            </li>
+            <li>Helen McClaskey: Doniphan, MO
+                <h1 class="reviewHeader4">Decent over all.</h1>
+                <p class="review4">Decent site, could have a better way to navigate</p>
+            </li>
+            <li>Anna Erickson: Ketchum, ID
+                <h1 class="reviewHeader5">Worn't break the bank.</h1>
+                <p class="review5">This was the best way to get a new phone that didn't break the bank.</p>
+            </li>
+        </ol>
+    </main>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDamRIBhq4OH5BtYDEFBO313e0zYMS3jK4&callback=myMap"></script>
+
+</body>
+
+</html>

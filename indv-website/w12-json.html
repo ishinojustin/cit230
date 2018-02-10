@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Load JSON File Locally by Javascript Without JQuery</title>
+</head>
+
+<body onload="load()">
+    <div id="map" style="width:640px; height:480px;"></div>
+
+    <script src="json/w12-pp-json.json"></script>
+
+    <script>
+        function load() {
+
+            // Initialize Google Maps and load the data
+            const mapOptions = {
+                center: new google.maps.LatLng(39.8283, -98.5795),
+                zoom: 4
+            }
+            const map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+            var mydata = JSON.parse(data);
+
+            for (x = 0; x < 4; x++) {
+                let marker = new google.maps.Marker({
+                    map: map,
+                    position: new google.maps.LatLng(mydata[x].location[0], mydata[x].location[1]),
+                    title: mydata[x].name
+                })
+            }
+        }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDamRIBhq4OH5BtYDEFBO313e0zYMS3jK4&sensor=true"></script>
+
+</body>
+
+</html>

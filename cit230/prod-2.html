@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>final-hands-on-exam</title>
+    <style type="text/css">
+        body {
+            background-color: beige;
+            font-family: Courier, Verdana, cursive;
+            font-size: 100%;
+            margin: 0px;
+        }
+
+        header {
+            background-color: pink;
+            border: dotted;
+            text-align: center;
+
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .flex-item {
+            width: 40%;
+            margin: 1em;
+        }
+
+        #left-col {
+            border: solid 2px;
+            font-size: 100%;
+        }
+
+        main {
+            border: solid 2px;
+            font-size: 100%;
+        }
+
+        aside {
+            border: solid 2px;
+            font-size: 100%;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            border: solid 4px;
+            font-size: 100%;
+            background-color: aqua;
+            text-align: center;
+            padding: .5em;
+        }
+
+        p {
+            font-size: 100%;
+        }
+
+        #in-line {
+            background-color: lime;
+            font-weight: bold;
+            font-size: 100%;
+        }
+
+        a:hover {
+            background-color: #00FF00;
+        }
+
+        img {
+            border: dashed 4px;
+            border-color: blue;
+            width: 30%;
+            height: 30%;
+            display: block;
+            margin: auto
+        }
+
+        .cite {
+            font-style: italic;
+            color: red;
+            text-decoration: underline;
+            font-size: 200%;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Web Design and Development</h1>
+    </header>
+
+    <p class="center">This 3-semester credit hour course <span class="center" id="in-line">prepares</span> students in basic web page design and development</p>
+    <div class="flex-container">
+        <div id="left-col" class="flex-item">
+            <h2>Left Col:</h2>
+            <ul>
+                <li><a href="https://www.byui.edu">www.byui.edu</a></li>
+                <li><a href="https://www.usu.edu">www.usu.edu</a></li>
+                <li><a href="https://www.lds.org">www.lds.org</a></li>
+            </ul>
+        </div>
+
+        <main class="flex-item">
+            <p class="cite">Mid Col</p>
+            <p>This was the best class ever!</p>
+        </main>
+
+        <aside class="flex-item">
+            <h2>Right Col:</h2>
+            <ul>
+                <li><a href="https://www.bing.com">www.bing.com</a></li>
+                <li><a href="https://www.yahoo.com">www.yahoo.com</a></li>
+                <li><a href="https://www.wikipedia.com">www.wikipedia.com</a></li>
+            </ul>
+
+            <img src="computer.jpg" alt="computer" title="Computers are Great!">
+
+        </aside>
+    </div>
+
+</body>
+
+<footer>Justin Ishino --CIT 230 -- MWF -- 7:45 - 8:45</footer>
+
+</html>

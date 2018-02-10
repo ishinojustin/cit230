@@ -1,0 +1,270 @@
+html {
+    box-sizing: border-box;
+    background-color: ghostwhite;
+    font-family: verdana, arial, sans-serif;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    font-size: 16px;
+}
+
+header {
+    background-color: #A4C639;
+    width: 100%;
+}
+
+main {
+    width: 75%;
+    margin: auto;
+}
+
+#mainnav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#mainnav li {
+    float: left;
+    width: 33%;
+}
+
+#mainnav li a {
+    display: block;
+    color: saddlebrown;
+    text-align: center;
+    padding: .3em;
+    text-decoration: none;
+}
+
+#mainnav li a:active {
+    background-color: saddlebrown;
+    color: wheat;
+}
+
+#mainnav li a:hover {
+    color: wheat;
+}
+
+main {
+    padding: 1.5em;
+}
+
+article {
+    border-style: solid;
+    margin: 2em;
+    padding: 1em;
+}
+
+article a {
+    color: black;
+    text-decoration: none;
+}
+
+#footnav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: wheat;
+}
+
+#footnav li {
+    float: left;
+    width: 33%;
+}
+
+#footnav li a {
+    display: block;
+    padding: 14px 16px;
+    color: saddlebrown;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+#footnav a:hover {
+    background-color: saddlebrown;
+    color: wheat;
+}
+
+/* Flexbox for Price Comparison */
+
+#sList {
+    padding-left: 90px;
+}
+
+#pList {
+    padding-left: 60px;
+}
+
+.phoneList {
+    display: flex;
+    flex-direction: column;
+}
+
+.phoneItem {
+    margin: 1em;
+    flex-wrap: wrap;
+}
+
+.priceList {
+    display: flex;
+    flex-direction: row;
+}
+
+.priceItem {
+    margin: 1em;
+    width: 33%;
+}
+
+.priceItem h1 {
+    font-size: 1em;
+    color: black;
+    text-decoration: none;
+}
+
+.priceItem {
+    text-decoration: none;
+    color: black;
+}
+
+.phoneItem picture {
+    float: left;
+}
+
+.specs {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+h1 a {
+    text-decoration: none;
+    color: black;
+}
+
+#bnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: wheat;
+}
+
+ul#bnav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+#bnav li a {
+    display: block;
+    padding: .75em;
+    color: saddlebrown;
+    text-align: center;
+    text-decoration: none;
+}
+
+#bnav a:hover {
+    background-color: saddlebrown;
+    color: wheat;
+}
+
+#clist li {
+    list-style: none;
+}
+
+#clist h1 {
+    font-size: .875em;
+}
+
+.review1 {
+    display: none;
+}
+
+.review2 {
+    display: none;
+}
+
+.review3 {
+    display: none;
+}
+
+.review4 {
+    display: none;
+}
+
+.review5 {
+    display: none;
+}
+
+@media only screen and (max-width: 490px) {
+    #mainnav {
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        background: #A4C639;
+        padding-top: .3em;
+        margin: 0;
+    }
+
+    #mainnav li {
+        float: left;
+        width: 50%;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin: 0;
+    }
+
+    #mainnav li a {
+        font-size: 18px;
+    }
+
+    .specs {
+        float: left;
+    }
+
+    .priceList {
+        float: left;
+    }
+
+    #bnav {
+        font-size: .5em;
+    }
+
+    main {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 132px;
+    }
+
+    body {
+        font-size: 2em;
+    }
+
+    h1 {
+        font-size: 1.75em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    article {
+        margin: .25em;
+        padding: .2em;
+    }
+    .specs {
+        font-size: 1.15em;
+    }
+
+}

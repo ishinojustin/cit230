@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/indv-style.css">
+    <title>Reviews</title>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        $(function() {
+            $(".review1").removeClass('hidden');
+        });
+        $(document).ready(function() {
+            $(".reviewHeader1").click(function() {
+                $(".review1").slideDown("slow");
+            });
+
+            $(".reviewHeader1").dblclick(function() {
+                $(".review1").slideUp("slow");
+            });
+
+            $(".reviewHeader2").click(function() {
+                $(".review2").slideDown("slow");
+            });
+
+            $(".reviewHeader2").dblclick(function() {
+                $(".review2").slideUp("slow");
+            });
+
+            $(".reviewHeader3").click(function() {
+                $(".review3").slideDown("slow");
+            });
+
+            $(".reviewHeader3").dblclick(function() {
+                $(".review3").slideUp("slow");
+            });
+
+            $(".reviewHeader4").click(function() {
+                $(".review4").slideDown("slow");
+            });
+
+            $(".reviewHeader4").dblclick(function() {
+                $(".review4").slideUp("slow");
+            });
+
+            $(".reviewHeader5").click(function() {
+                $(".review5").slideDown("slow");
+            });
+
+            $(".reviewHeader5").dblclick(function() {
+                $(".review5").slideUp("slow");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav id="mainnav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="used-phones.html">Pros and Cons</a></li>
+                <li><a href="phone-history.html">Smartphone History</a></li>
+                <li><a href="price-compare.html">Price Comparison</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="../cit230-links.html"> CIT230-links</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 id="android-history">Customer Reviews</h1>
+        <ol id="clist">
+            <li>Larry Larson: Bowling Green, KY
+                <h1 class="reviewHeader1">Best Site to Buy Used Phones! &rarr;</h1>
+                <p class="review1">I had tried to find the best price on a phone and this made it easy to know what I should be paying for the phone I wanted.</p>
+            </li>
+            <li>Adam Smith: COBBS HILL QLD AUSTRALIA
+                <h1 class="reviewHeader2">No guessing on Price! &rarr;</h1>
+                <p class="review2">Looking for a "New" Phone was always hard and I never knew what the best price would be this site has taken all that guess work out of the process.</p>
+            </li>
+            <li>Matthew Jones: Elmhurst, IN
+                <h1 class="reviewHeader3">Everything you need in one place. &rarr;</h1>
+                <p class="review3">Good site, all the information that you could want is in one place.
+                    <p>
+            </li>
+            <li>Helen McClaskey: Doniphan, MO
+                <h1 class="reviewHeader4">Decent over all. &rarr;</h1>
+                <p class="review4">Decent site, could have a better way to navigate</p>
+            </li>
+            <li>Anna Erickson: Ketchum, ID
+                <h1 class="reviewHeader5">Worn't break the bank. &rarr;</h1>
+                <p class="review5">This was the best way to get a new phone that didn't break the bank.</p>
+            </li>
+        </ol>
+    </main>
+
+    <footer>
+    </footer>
+</body>
+
+</html>
